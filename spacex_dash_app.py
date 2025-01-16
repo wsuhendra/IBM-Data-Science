@@ -82,7 +82,7 @@ def get_pie_chart(entered_site):
               [Input(component_id='site-dropdown', component_property='value'),
                Input(component_id='payload-slider',component_property='value')])
 def get_payload_chart(launch_site, payload_mass):
-    if launch_site == 'All Sites':
+    if launch_site == 'ALL':
         fig = px.scatter(spacex_df[spacex_df['Payload Mass (kg)'].between(payload_mass[0], payload_mass[1])], 
                 x="Payload Mass (kg)",
                 y="class",
